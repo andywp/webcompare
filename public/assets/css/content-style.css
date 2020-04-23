@@ -1,0 +1,152 @@
+/* section paket compare */
+#nat-qv8 .paket-compare .square-card-paket:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+}
+#nat-qv8 .paket-compare .square-card-paket {
+    width: 260px;
+    display: inline-block;
+    border: 1px solid #ff7e2d;
+    border-radius: 5px;
+    min-height: 400px;
+}
+img.compare__card--image.thumbnail {
+    display: block;
+    width: 150px;
+    margin: auto;
+}
+.compare__card{
+    list-style: none;
+    padding-inline-start: 0;
+    margin-bottom: 0;
+}
+h3.compare__card--title {
+    margin-bottom: 30px;
+    font-weight: 900;
+    color: #000;
+}
+button#compare.compare__card--button {
+    width: 80%;
+    background: #ff7e2d;
+    color: #fff;
+    min-height: 50px;
+    border: none;
+    /* margin-bottom: 30px; */
+    border-radius: 10px;
+}
+#nat-qv8 .paket-compare .square-card-paket:hover button#compare{
+    background: #fff;
+    color: #ff7e2d;
+    border: solid 1px #ff7e2d;
+}
+.paket-compare .owl-stage-outer{
+    padding-top: 30px;
+}
+.paket-compare .item.item-outer{
+    margin-bottom: 30px;
+}
+
+/* compare-page */
+.detailCoupon p {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.wrapDetail h2 {
+    font-size: 26px;
+}
+section.compare-produk {
+    margin-top: 60px;
+}
+.detailCoupon li{
+    background: rgba(0,0,0,.075);
+    margin-bottom: 6px;
+}
+ul.detailCoupon{
+    list-style: none;
+    padding-left: 0;
+}
+.coupon {
+    border: 3px dotted #fba521;
+    width: 80%;
+    border-radius: 15px;
+    margin: 0 auto;
+    max-width: 600px;
+    min-height: 400px;
+}
+  
+  .containerCoupon {
+    padding: 2px 16px;
+    background-color: #f1f1f1;
+  }
+  
+  .promo {
+    background: #ccc;
+    padding: 3px;
+  }
+  
+  /* .wrapContainer.p-Abs {
+    position: absolute;
+    top: 45%;
+} */
+.p-Abs .containerCoupon {
+    width: 95%;
+    background-color: #ffffff8c;
+    margin: auto;
+}
+.wrapWinner {
+    display: table;
+    background: #2c61f5;
+    padding: 10px;
+    border-radius: 16px 0;
+    position: absolute;
+    top: -5%;
+    left: 5%;
+}
+.bg-winner {
+    background: url(../img/win-sml.png);
+    width: 44px;
+    height: 25px;
+    background-repeat: no-repeat;
+}
+p.vs {
+    position: absolute;
+    top: 32%;
+    left: 15%;
+    text-align: center;
+    color: #bd2130;
+    font-size: 12px;
+    font-weight: 600;
+}
+p.bgVs {
+    position: relative;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+}
+.sparator {
+    display: block;
+}
+.versus {
+    background-color: #f5a217;
+    padding: 5px;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 35%;
+    left: 93%;
+}
+/* .containerCoupon.wrapDetail.text-center {
+    width: 100%;
+    max-width: 250px;
+} */
+.sparataorCoupon{
+    border-left: solid 1px #dee2e6;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}

@@ -1,0 +1,126 @@
+/* subscribe */
+.label-text {
+  text-align: center;
+  padding: 0 30%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+}
+
+.root-subs {
+  background: #ED5C28;
+  color: white;
+  min-height: 180px;
+  display:flex;
+  align-items: center;
+  background-image: url("https://qwords.com/img/subscribe/Vector.svg"), url("https://qwords.com/img/subscribe/vector-d.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  background-position: 0 -17px, right 17px;
+}
+
+
+.label-subs {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.input-subs::placeholder { 
+  color: #AD2F02;;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.input-subs {
+  background: transparent;
+  border : none;
+  border-bottom: 1px solid #E0E0E0;
+  padding:.5em 1em;
+  min-width: 336px;
+  color:white;
+  width: 100%;
+}
+
+.input-subs:focus{
+  outline:none;
+}
+
+.button-subs {
+  background: #FFA65B;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #FFFFFF;
+  min-width: 212px;
+  min-height: 50px;
+  cursor:pointer;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.f-mobile {
+      display: none;
+  }
+@media screen and (max-width: 1080px) {
+  .root-subs{
+      background-image:none;
+      padding: 10px;
+  }
+  
+  .f-mobile {
+      display: block;
+  }
+  
+  .m-sub-desc {
+      display:none;
+  }
+  
+  .m-sub-news {
+      display:none;
+  }
+  
+  .m-sub-input {
+      margin:1em 0;
+  }
+  
+  .m-sub-submit {
+      text-align:center;
+  }
+}
+/* footer */
+
+.contact .info-qv8{
+    margin: 0 auto;
+    display: table;
+}
+.contact .infos-qv8{
+    margin: 0 0 0 auto;
+    display: table;
+}
+@media (max-width: 991px){
+    .contact .info-qv8, .contact .infos-qv8{
+        display: unset;
+    }
+    .contact .img-qv8 img{
+        display: table;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .contact .col-lg-4{
+        margin-bottom: 30px;
+    }
+}

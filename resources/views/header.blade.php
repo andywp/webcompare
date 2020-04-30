@@ -7,9 +7,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/all-css.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/subscribe.css') }}" type="text/css">
+    <!-- <link rel="stylesheet" href="{{ URL::asset('assets/css/owl.carousel.min.css') }}"> -->
+    <!-- <link rel="stylesheet" href="{{ URL::asset('assets/css/content-style.css') }}"> -->
     <link rel="stylesheet" href="{{ URL::asset('assets/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/content-style.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/subscribe.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/style_hengky.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/style_compare.css') }}">
     
     {!! SEO::generate() !!}
 

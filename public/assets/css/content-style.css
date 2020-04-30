@@ -1,3 +1,14 @@
+/* section{
+    margin:70px 0;
+} */
+
+
+
+
+
+
+
+
 /* section paket compare */
 #nat-qv8 .paket-compare .square-card-paket:hover {
     transform: scale(1.1);
@@ -149,4 +160,53 @@ p.bgVs {
     position: absolute;
     left: 100%;
     top: 0;
+}
+
+
+/** modal ***/
+.modal-dialog-full-width {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width:none !important;
+
+}
+
+.modal-content-full-width  {
+    height: auto !important;
+    min-height: 100% !important;
+    border-radius: 0 !important;
+    background-color: #ececec !important 
+}
+
+.modal-header-full-width  {
+    border-bottom: 1px solid #9ea2a2 !important;
+}
+
+.modal-footer-full-width  {
+    border-top: 1px solid #9ea2a2 !important;
+}
+
+/*andy */
+.heading{
+    margin:15px 0;
+}
+
+
+/*section detail comapre */
+.comparw-detail, .compare-produk{
+    margin:70px 0;
+
+}
+
+.comparw-detail .nav-tabs {
+    border-bottom: 1px solid #ee3a23;
+}
+
+.comparw-detail .nav-tabs .nav-item.show .nav-link, .comparw-detail  .nav-tabs .nav-link.active  {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ee3a23;
+
 }

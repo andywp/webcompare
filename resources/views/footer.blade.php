@@ -1,3 +1,163 @@
+<section class="subscb">
+        <div class="row root-subs">
+            <div class="col-md-12 label-text m-sub-desc" style="padding: 0 26%;">Raih Diskon 50.000 dengan subscribe newsletter Qwords dan dapatkan update promo terbaru serta artikel menarik lainnya.</div>
+            <div class="col-md-12 label-text f-mobile" style="padding: 10px;">Subscribe untuk promo terbaru!</div>
+            <div class="col-md-4 col-xs-12 m-sub-news" style="text-align:right;">
+                <span class="label-subs">Newsletter</span>
+            </div>
+            <div class="col-md-4 col-xs-12 m-sub-input">
+                <input type="text" placeholder="Email Address" class="input-subs" type="email" value="" name="EMAIL">
+            </div>
+            <div class="col-md-4 col-xs-12 m-sub-submit">
+                <input id="subs-email" type="submit" value="Subscribe"  class="button-subs" >
+            </div>
+        </div>
+        </form>
+        </div>
+    </section>
+    
+   
+    
+    <section class="footer-alamat">
+        <div class="container">
+            <div class="max-width">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <h3><a href="https://www.qwords.com/about-qwordscom/contact-qwordscom/kantor-qwords-jakarta/"><b>Kantor Jakarta</b></a></h3>
+                        <p>Gedung Cyber 1 Lantai 3,
+                        Jl.Kuningan Barat no.8, 
+                        Jakarta 12710 - Indonesia</p><br>
+                        <p>Local Phone : <a href="tel:+622139708800">021 39708800</a></p>
+                    </div>
+                    <div class="col-xl-3">
+                        <h3><a href="https://www.qwords.com/about-qwordscom/contact-qwordscom/kantor-qwords-bandung/"><b>Kantor Bandung</b></a></h3>
+                        <p>Gedung The Island, Jalan Sukajadi No 5, Sukajadi
+                        Bandung 40162 - Indonesia</p><br>
+                        <p>Local Phone : <a href="tel:+622230508800">022 30508800</a></p>
+                    </div>
+                    <div class="col-xl-3">
+                        <h3><a href="https://www.qwords.com/about-qwordscom/contact-qwordscom/kantor-qwords-surabaya/"><b>Kantor Surabaya </b></a></h3>
+                        <p>San Diego Pakuwon City,
+                            Surabaya 60112 - Indonesia</p><br><br>
+                        <p>Local Phone : <a href="tel:+623130008800">031 30008800</a></p>
+                    </div>
+                    <div class="col-xl-3">
+                        <h3><a href="https://www.qwords.com/about-qwordscom/contact-qwordscom/kantor-qwords-yogyakarta/"><b>Kantor Yogyakarta </b></a></h3>
+                        <p>Jl. Blotan no. 18 Kayen Wedomartani, 
+                        Ngemplak, Sleman, Yogyakarta 55584 
+                        - Indonesia</p>
+                        <p>Local Phone : <a href="tel:++622746058800">0274 6058800</a></p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="line">
+        <hr style="
+            margin-top   : 0;
+            margin-bottom: 0;
+            margin-left  : 8em;
+            margin-right : 8em;
+        ">
+    </div>
+    <footer class="footer" role="contentinfo">
+        <div class="tfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="max-width husen row">
+                        <div class="col-lg-3">
+                            <section class="sfooter"><h3><b>Mengenai Kami</b></h3>
+                                <ul class="menu">
+                                    <li><a href="http://www.qwords.co.id/">Corporate Website</a></li>
+                                    <li><a href="https://www.qwords.com/about-qwordscom/history/">Qwords History</a></li>
+                                    <li><a href="https://www.qwords.com/about-qwordscom/difference/">Qwords Differences</a></li>
+                                    <li><a href="https://www.qwords.com/media-publication/">Media Publication</a></li>
+                                    <li><a href="https://www.qwords.com/about-qwordscom/network/">Network & Infrastructure</a></li>
+                                    <li><a href="https://www.qwords.com/about-qwordscom/partner/">Partner</a></li>
+                                    <li><a href="https://cdnserver.qwords.com/qwords/pdf/Media%20Kit.pdf">Media Kit</a></li>
+                                    <li><a href="https://www.qwords.com/about-qwordscom/penggunaan-merek-dan-logo/">Registered Trademark</a></li>
+                                    <li><a href="https://www.qwords.com/about-qwordscom/contact-qwordscom/">Contact Us</a></li>
+                                    <li><a href="https://www.qwords.com/master-service-agremeent/">Legal</a></li>
+                                    <li><a href="https://www.qwords.com/about-qwordscom/career/">Career & Employment</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div id="layanan" class="col-lg-3">
+                            <section class="sfooter" style="margin-bottom: 20px;"><h3><b>Customer Care</b></h3>
+                                <ul class="menu">
+                                    <li><a href="https://www.qwords.com/order-payment/">Pembayaran/Pemesanan</a></li>
+                                    <li><a href="https://portal.qwords.com/submitticket.php">Support Ticket</a></li>
+                                    <li><a href="https://kb.qwords.com/">Knowledge Base</a></li>
+                                    <li><a href="https://www.qwords.com/faq/">FAQ</a></li>
+                                    <li><a href="https://www.qwords.com/about-qwordscom/contact-qwordscom/ask-a-meeting-schedule/">Kunjungi Kami</a></li>
+                                    <li><a href="https://www.qwords.com/qwords-rewards/">Qwords Rewards</a></li>
+                                    <li><a href="https://qwords.com/blog">Blog</a></li>
+                                </ul>
+                            </section>
+                            <section class="sfooter"><h3><b>Layanan Reseller</b></h3>
+                                <ul class="menu">
+                                    <li><a href="https://www.qwords.com/afiliasi/">Afiliasi</a></li>
+                                    <li><a href="https://www.qwords.com/reseller/qwordscom-package-reseller/">Qwords Reseller Package</a></li>
+                                    <li><a href="https://www.qwords.com/reseller/private-label-hosting-reseller/">Private Label Hosting Reseller</a></li>
+                                    <li><a href="https://www.qwords.com/reseller/private-label-domain-reseller/">Private Label Domain Reseller</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div id="remove" class="col-lg-3">
+                            <section class="sfooter"><h3><b>Layanan Unggulan</b></h3>
+                                <ul class="menu">
+                                    <li><a href="https://www.qwords.com/web-hosting/value-performance/">Value Performance</a></li>
+                                    <li><a href="https://www.qwords.com/web-hosting/medium-performance-high-storage/">Medium Performance High Storage</a></li>
+                                    <li><a href="https://www.qwords.com/web-hosting/high-performance-hosting-cloud-computing/">High Performance Hosting Cloud Computing</a></li>
+                                    <li><a href="https://www.qwords.com/unlimited-hosting">Unlimited Hosting</a></li>
+                                    <li><a href="https://www.qwords.com/wordpress-hosting/">WordPress Hosting</a></li>
+                                    <li><a href="https://www.qwords.com/dedicated-server/virtual-dedicated-server/">Cloud VPS</a></li>
+                                    <li><a href="https://www.qwords.com/dedicated-box-server/virtual-dedicated-server-double-speed/">Cloud VPS-D</a></li>
+                                    <li><a href="https://www.qwords.com/dedicated-server/virtual-dedicated-server-kvm/">Cloud VPS-K</a></li>
+                                    <li><a href="https://www.qwords.com/dedicated-server/dedicated-box/">Dedicated Bare Metal Server</a></li>
+                                    <li><a href="https://www.qwords.com/dedicated-server/colocation/">Colocation Server</a></li>
+                                    <li><a href="https://www.qwords.com/services/secured-sockets-layer-certificate/">SSL Certificate</a></li>
+                                    
+                                </ul>
+                            </section>
+                        </div>
+                        <div id="remove" class="col-lg-3">
+                            <section class="sfooter"><h3><b>Layanan Lainnya</b></h3>
+                                <ul class="menu">
+                                    <li><a href="https://www.qwords.com/eccs/">EC Collaboration Suite</a></li>      
+                                    <li><a href="https://www.qwords.com/gsuite/">G Suite</a></li>
+                                    <li><a href="https://www.qwords.com/office365">Office365</a></li>
+                                    <li><a href="https://www.qwords.com/services/extended-support/">Extended Support</a></li>
+                                    <li><a href="https://www.qwords.com/manage-the-box-dedicated-colocation-server/">Manage The Box</a></li>
+                                    <li><a href="https://www.qwords.com/licenses/">Licenses</a></li>
+                                    <li><a href="https://www.qwords.com/digital-signature/">Digital Signature</a></li>
+                                    <li><a href="https://www.qwords.com/services/ftp-backup/">FTP Backup</a></li>
+                                    <li><a href="https://www.qwords.com/spam-filter/">Spam Filter</a></li>
+                                    <li><a href="https://www.qwords.com/flexi-main-domain/">Flexi Main Domain</a></li>
+                                    <li><a href="https://www.qwords.com/services/backup-data-hosting-ke-cd-dvd/">CD / DVD Backup</a></li>
+                                    <li><a href="https://www.qwords.com/services/hosting-insurance/">Hosting Insurance</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="line">
+        <hr style="
+            margin-top   : 0;
+            margin-bottom: 0;
+            margin-left  : 8em;
+            margin-right : 8em;
+        ">
+    </div>
+
+
+
+
 <footer class="footer" role="contentinfo">
         <div class="tfooter">
             <div class="container">
@@ -286,13 +446,13 @@
 -->
     
     
-    <script src="{{ URL::asset('assets/js/jquery-3.4.1.slim.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/popper.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/bootstrap.min.js') }}"></script>
-    
-  <!--  <script src="{{ URL::asset('assets/js/owl-section1.js') }}"></script> -->
+    <script src="{{ URL::asset('assets/js/all_footer.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/jquery-3.4.1.min.js') }}"></script> 
     <script src="{{ URL::asset('assets/js/owl.carousel.min.js') }}"></script>
-   
+    <script src="{{ URL::asset('assets/js/Chart.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/utils.js') }}"></script>
+    
+
     <script>
         $(document).ready(function() {
 
@@ -301,7 +461,7 @@
                 slidesToScroll: 1,
                 loop: true,
                 autoplay:true,
-                speed: 3000,
+                speed: 2000,
                 smartSpeed:2000,
                 dots: false,
                 margin: 15,
@@ -314,10 +474,10 @@
                     items: 1
                     },
                     768 : {
-                    items: 2
+                    items: 3
                     },
                     992  : {
-                    items: 2
+                    items: 4
                     },
                     1200: {
                     items: 4

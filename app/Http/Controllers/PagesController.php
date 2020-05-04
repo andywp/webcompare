@@ -107,10 +107,13 @@ class PagesController extends Controller
 
 
     public function hosting($url){
-        $hosting = DB::table('hosting')->where('slug_url', anti_Injection($url))->get();
-        adodb_pr($hosting);
+        $hosting = DB::table('hosting')->where('slug_url', anti_Injection($url))->first();
+       // adodb_pr($hosting);
+       $fitur=unserialize($hosting->deskripsi);
+       $produk = DB::table('hosting')->select('id', 'paket','slug_url')->get();
 
-        return view('hosting',['data',$hosting]);
+
+        return view('hosting',['data'=>$hosting ,'fitur' => (object)$fitur, 'produk' => $produk]);
     }
 
 

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/css/subscribe.css') }}" type="text/css">
     <!-- <link rel="stylesheet" href="{{ URL::asset('assets/css/owl.carousel.min.css') }}"> -->
     <!-- <link rel="stylesheet" href="{{ URL::asset('assets/css/content-style.css') }}"> -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ URL::asset('assets/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/style_hengky.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/style_compare.css') }}?v={{rand(1,9)}}">

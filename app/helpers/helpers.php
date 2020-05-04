@@ -95,4 +95,105 @@
     }
 	
 
+	function storageBar($data){
+		$number=intval($data);
+
+		$posisi=strpos($data,'GB');
+		if($posisi){
+			$ssd=strpos($data,'SSD');
+			if($ssd){
+				return ($number * 10) + 5;
+			}else{
+				return ($number * 10);
+			}
+		}else{
+			return 10;
+		}
+	}
+
+	function ramBar($data){
+		$number=intval($data);
+
+		$posisi=strpos($data,'MB');
+		if($posisi){	
+			return 10;
+
+		}else{
+			return $number * 10;
+		}
+	}
+	function cpuBar($data){
+		$number=intval($data);
+		return $number * 10;	
+	}
+
+	function inodes($data){
+		$number=str_replace('.','',$data);
+		if($number < 49999 ){
+			return 40;
+		}elseif($number >= 50000 && $number <= 75000){
+			return 50;
+		}elseif($number >= 75001 && $number <= 100000){
+			return 60;
+		}elseif($number >= 100001 && $number <= 150000){
+			return 70;
+		}elseif($number >= 150001 && $number <= 175000){
+			return 80;
+		}elseif($number >= 175001 && $number <= 200000){
+			return 90;
+		}else{
+			return 100;
+		}
+
+	}
+
+	function php_memory($data){
+		$number=intval($data);
+		$number=($number / 512 ) * 100;
+		return ceil($number);
+	}
+
+	function akunEmail($data){
+		if(is_numeric($data)){
+			return $number=intval($data);
+		}else{
+			return 100;
+		}
+	}
+
+	function max_email($data){
+		return ($data / 1000) * 100;
+	}
+
+	function akun_FTP($data){
+		if(is_numeric($data)){
+			return $number=intval($data);
+		}else{
+			return 100;
+		}
+	}
+
+	function addons($data){
+		if(is_numeric($data)){
+			$number=intval($data);
+			return ($number / 50) * 100;
+		}else{
+			return 100;
+		}
+	}
+
+	function domainCart($data){
+		if($data =='Free' ){
+			return 100;
+		}else{
+			return 0;
+		}
+	}
+
+	function subdomainCart($data){
+		return ($data / 50) * 100;
+	}
+
+
+
 ?>

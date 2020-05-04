@@ -182,3 +182,10 @@ canvas {
 .hosting-tabs .nav-link {
     padding: 0 !important;
 }
+
+.box-btn-compare {
+    position: fixed;
+    top: 30%;
+    right: 10px;
+    z-index: 99999999;
+}

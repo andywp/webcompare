@@ -22,4 +22,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@index');
 Route::get('/cek', 'PagesController@cek');
 
-Route::get('hosting/{id}', 'PagesController@WebCompare')->name('hosting');
+Route::get('hosting/{id}', 'PagesController@hosting')->name('hosting');

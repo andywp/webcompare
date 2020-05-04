@@ -12,8 +12,8 @@
     <!-- <link rel="stylesheet" href="{{ URL::asset('assets/css/content-style.css') }}"> -->
     <link rel="stylesheet" href="{{ URL::asset('assets/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/style_hengky.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/style_compare.css') }}">
-    
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/style_compare.css') }}?v={{rand(1,9)}}">
+   
     {!! SEO::generate() !!}
 
     

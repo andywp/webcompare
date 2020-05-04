@@ -177,3 +177,8 @@ canvas {
     background-color: #f7863b;
     border-color: #f7863b;
 }
+
+/*Tabs Hosting*/
+.hosting-tabs .nav-link {
+    padding: 0 !important;
+}

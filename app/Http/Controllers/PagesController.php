@@ -70,6 +70,7 @@ class PagesController extends Controller
                                     <div class="box-title">
                                         <h3 class="heading-title text-center">'.$r->paket.'</h3>
                                     </div>
+                                    <a href="'.route('hosting',$r->slug_url).'" title="Bandingkan" class="btn btn-orange">Compare</a>
                                 </div>
                             </div>
                             ';
@@ -84,10 +85,12 @@ class PagesController extends Controller
         }
 
 
+
+
           $html = '
                     <div class="produk-hosting">
                         <nav>
-                            <div class="nav nav-tabs nav-fill mt-5 mb-5" id="nav-tab" role="tablist">
+                            <div class="nav nav-tabs nav-fill mt-5 mb-5 hosting-tabs" id="nav-tab" role="tablist">
                                 ' . $tabsMenu . '
                             </div>
                         </nav>
@@ -103,12 +106,19 @@ class PagesController extends Controller
     }
 
 
+    public function hosting($url){
+        $hosting = DB::table('hosting')->where('slug_url', anti_Injection($url))->get();
+        adodb_pr($hosting);
+
+        return view('hosting',['data',$hosting]);
+    }
+
 
     private function hostingData($id){
 
         $hosting = DB::table('hosting')
                 ->select('id', 'paket', 'slug_url')
-                ->where('kategori_id', $kat->id)->get();
+                ->where('kategori_id', $kat->id)->first();
 
         return $hosting;
     }

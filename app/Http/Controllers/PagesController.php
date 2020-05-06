@@ -130,22 +130,48 @@ class PagesController extends Controller
     }
 
     public function compare($url){
-        
+        /*uri query string*/
         $url=anti_Injection($url);
         $urlSlug=explode('-vs-',urldecode($url));
+        /*--- load DB----- */
         $hosting = DB::table('hosting')
         ->whereIn('slug_url', $urlSlug)->get();
         
-       // adodb_pr($hosting);
+       /* untuk select compare */
        $produk = DB::table('hosting')->select('id', 'paket','slug_url')->get();
        $titleSEO='';
+        $idp=array();
         foreach($hosting as $k){
             $titleSEO.=$k->paket.' vs ';
-        }
+            $idp[]=$k->id;
 
+        }
         SEOMeta::setTitle('Compare '. $titleSEO);
         SEOMeta::setDescription('Compare '. $titleSEO);
         SEOMeta::setCanonical(url('/'));
+
+         /**comapre */
+        adodb_pr($idp);
+        /* vs 1 */     
+        
+
+        /* if(@$idp[0]){
+            $vsDB1 = DB::table('hosting')->where('id',$idp[0])->first();
+            $detail=(object)unserialize($vsDB1->deskripsi);
+            adodb_pr($detail);
+            $id=$vsDB1->id;
+            $memori1=convertStorage($detail->storage);
+            $bandwidth1=($detail->bandwidth=='Unmetered')?9999999999:convertStorage($detail->bandwidth);
+            $cpu1=floatval($detail->CPU_core);
+
+
+        }
+ */
+
+
+
+
+
         return view('compare',['data'=>$hosting, 'produk' => $produk]);
 
     }

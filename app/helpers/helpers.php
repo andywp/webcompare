@@ -82,6 +82,18 @@
 		
 	}
 
+	function convertStorage($data){
+		$cek=strpos($data,'GB');
+		if($cek){
+			return floatval($data) * 1024;
+		}else{
+			return floatval($data);
+		}
+
+	}
+
+
+
 
 	function anti_Injection($inp)
     { 

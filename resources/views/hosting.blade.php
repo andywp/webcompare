@@ -134,8 +134,12 @@
                             <div class="recent-post-ctn">
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
-                                        <h2>Storage</h2>
-                                        
+										<h2>Storage</h2>
+										<div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Besaran ruang/storage untuk pengguna menyimpan data website, email, dsb.">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -161,7 +165,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Bandwidth</h2>
-                                        
+                                        <div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Bandwidth merupakan kapasitas maksimum untuk mentransfer data. Hosting Qwords memiliki bandwidth unmetered agar pengguna lebih leluasa dalam mengelola akun Hosting.">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -188,7 +196,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Ram</h2>
-                                        
+                                        <div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Batas physical memory yang dapat digunakan untuk menjalankan setiap proses yang ada pada hosting seperti halnya proses PHP">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -215,7 +227,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>CPU</h2>
-                                        
+                                        <div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Merupakan salah satu batasan sumber daya dari alokasi Central Processing Unit (CPU) yang bisa dipakai untuk setiap akun Hosting. Dalam hal kecepatan, 1 Core di Hosting Qwords terdiri dari rata-rata 2.1 Ghz, jumlah core CPU sangat berpengaruh terhadap kecepatan website anda.">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -242,7 +258,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Entry Proses</h2>
-                                        
+                                        <div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Banyaknya script PHP yang dapat berjalan dalam satu waktu.">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -268,7 +288,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Inodes</h2>
-                                        
+										<div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Banyaknya satuan file yang dapat disimpan di Hosting Anda. Termasuk file email, file Log, file database. Secara berkala website/email anda akan terus menerima atau membuat data tergantung dari banyaknya aktivitas pada website/email tersebut.">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -294,7 +318,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>PHP Memory</h2>
-                                        
+                                        <div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Besaran Memori maksimal yang dapat digunakan oleh semua proses PHP pada 1 Hosting dalam 1 waktu. Penggunaan Memory bergantung dari banyaknya plugin/module yang digunakan website-website di Hosting Anda.">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -320,7 +348,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Database</h2>
-                                        
+										<div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Banyaknya Database yang dapat dibuat oleh pengguna. Database berisi data yang diperlukan untuk website yang dinamis seperti website dengan CMS Wordpress, Joomla dsb.">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -347,7 +379,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Akun Email</h2>
-                                        
+                                        <div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Banyaknya akun email yang dapat dibuat oleh pengguna. Email yang dibuat dapat menggunakan @namadomain yang telah anda pasang ke dalam Hosting anda.">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -373,7 +409,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Max email/hour</h2>
-                                        
+                                        <div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Jumlah email maksimal yang dapat dikirimkan dalam 1 jam.">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -399,7 +439,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Akun FTP</h2>
-                                        
+                                        <div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Banyaknya akun FTP yang dapat dibuat oleh pengguna. Akun FTP adalah akun untuk mempermudah Anda dalam mengelola data di Hosting menggunakan software FTP seperti filezilla, dsb.">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -425,7 +469,14 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Addon / Parked</h2>
-                                        
+                                        <div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Banyaknya Domain yang dapat dimasukan kedalam satu akun Hosting.
+
+Addon memiliki folder khusus sehingga dapat menyimpan data website yang berbeda dengan Domain utama.
+Parked tidak memiliki folder khusus, hanya digunakan sebagai Domain tambahan untuk website pada Domain utama.">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -451,7 +502,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Domain</h2>
-                                        
+                                        <div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Gratis Domain untuk pemesanan langsung 1 tahun, Pemesanan Hosting dapat bersamaan dengan Pemesanan Domain atau Hosting saja jika sudah memiliki Domain">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -483,7 +538,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Subdomain</h2>
-                                        
+										<div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Banyaknya subdomain yang dapat dibuat oleh pengguna. Subdomain memungkinkan Anda membuat website tambahan menggunakan Domain yang sama namun ditambah awalan seperti contoh: abc.namadomainanda.com">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -510,7 +569,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>SSL</h2>
-                                        
+                                        <div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Gratis SSL Premium untuk pemesanan langsung 1 tahun">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -543,7 +606,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Spam filter</h2>
-                                        
+                                        <div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Fitur unggulan yang menggunakan teknik kecerdasan buatan (artificial intelligence) dalam memfilter setiap email yang masuk dan juga email yang keluar. Membuat email yang dikirim atau diterima lebih terpercaya.">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -575,7 +642,11 @@
                                 <div class="recent-post-title">
                                     <div class="vx-card__header">
                                         <h2>Remote MySQL</h2>
-                                        
+										<div class="vx-card__actions" data-toggle="tooltip" data-placement="top" title="Remote MySQL ini belum tersedia di paket HPCH, namun para Developer website tetap bisa memanfaatkan SSH untuk mengendalikan SQL melalui metode SSH Tunneling">
+                                            <span class="feather-icon select-none relative"  >
+												<i class="fas fa-question-circle"></i>
+											</span>
+										</div>
                                     </div>
                                 </div>
                             </div>

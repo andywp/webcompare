@@ -23,3 +23,8 @@ Route::get('/', 'PagesController@index');
 Route::get('/cek', 'PagesController@cek');
 
 Route::get('hosting/{id}', 'PagesController@hosting')->name('hosting');
+Route::get('compare/{id}', 'PagesController@compare')->name('compare');
+
+Route::prefix("ajax/")->group(function(){
+    Route::post('compare', 'PagesController@ajaxcompare')->name('ajaxCompare');
+});

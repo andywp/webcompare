@@ -124,6 +124,7 @@
 	}
 	function cpuBar($data){
 		$number=intval($data);
+		$number=($number==0)?0.5:$number;
 		return $number * 10;	
 	}
 
@@ -174,11 +175,15 @@
 	}
 
 	function addons($data){
-		if(is_numeric($data)){
-			$number=intval($data);
-			return ($number / 50) * 100;
+		if($data!='No'){
+			if(is_numeric($data)){
+				$number=intval($data);
+				return ($number / 50) * 100;
+			}else{
+				return 100;
+			}
 		}else{
-			return 100;
+			return 0;
 		}
 	}
 
@@ -191,7 +196,13 @@
 	}
 
 	function subdomainCart($data){
-		return ($data / 50) * 100;
+
+		if(is_numeric($data)){
+			return ($data / 50) * 100;
+		}else{
+			return 100;
+		}
+		
 	}
 
 

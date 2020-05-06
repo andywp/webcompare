@@ -14,9 +14,13 @@
     <link rel="stylesheet" href="{{ URL::asset('assets/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/style_hengky.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/style_compare.css') }}?v={{rand(1,9)}}">
-   
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     {!! SEO::generate() !!}
-
+    <script type="text/javascript" >
+        var selectAuto='';
+        var ajaxURL='<?= url('/'); ?>/ajax/';
+        var baseURL='<?= url('/'); ?>/';
+    </script>
     
 </head>
 
@@ -55,7 +59,7 @@
 
                             <h4 class="site-title">
                                 <a href="https://www.qwords.com">
-                                    <img src="assets/img/logo-qwords.png" alt="Qwords">
+                                    <img src="{{ URL::asset('assets/img/logo-qwords.png') }}" alt="Qwords">
                                 </a>
                             </h4>
                             <!-- custom mega menu -->

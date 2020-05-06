@@ -189,3 +189,23 @@ canvas {
     right: 10px;
     z-index: 99999999;
 }
+
+
+/*fitur*/
+.space-card h2 {
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.hosting-heading-card h6 {
+    margin-bottom: 24px;
+}
+
+.fitur-icon {
+	/* line-height: 3.6; */
+	margin-left: 15px;
+}
+
+.fitur-icon .media-body {
+    margin-bottom: 25px;
+}

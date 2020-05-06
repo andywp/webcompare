@@ -30,6 +30,8 @@ class PagesController extends Controller
     public function index()
     {
         SEOMeta::setTitle('Home');
+        SEOMeta::setDescription('Qwords Hosting Compare');
+        SEOMeta::setCanonical(url('/'));
         //SEOTools::setTitile('Qwors commpeare');
         /* $this->SEOTools->setDescription('Qwors commpeare');
         $this->SEOTools->opengraph('Qwors commpeare');
@@ -109,6 +111,7 @@ class PagesController extends Controller
     public function hosting($url){
         $hosting = DB::table('hosting')->where('slug_url', anti_Injection($url))->first();
        // adodb_pr($hosting);
+       SEOMeta::setTitle($hosting->paket);
        $fitur=unserialize($hosting->deskripsi);
        $produk = DB::table('hosting')->select('id', 'paket','slug_url')->get();
 
@@ -125,5 +128,60 @@ class PagesController extends Controller
 
         return $hosting;
     }
+
+    public function compare($url){
+        
+        $url=anti_Injection($url);
+        $urlSlug=explode('-vs-',urldecode($url));
+        $hosting = DB::table('hosting')
+        ->whereIn('slug_url', $urlSlug)->get();
+        
+       // adodb_pr($hosting);
+       $produk = DB::table('hosting')->select('id', 'paket','slug_url')->get();
+       $titleSEO='';
+        foreach($hosting as $k){
+            $titleSEO.=$k->paket.' vs ';
+        }
+
+        SEOMeta::setTitle('Compare '. $titleSEO);
+        SEOMeta::setDescription('Compare '. $titleSEO);
+        SEOMeta::setCanonical(url('/'));
+        return view('compare',['data'=>$hosting, 'produk' => $produk]);
+
+    }
+
+
+
+
+
+    public function ajaxcompare(Request $request){
+        $error = true;
+        $alert = '';
+        $url='';
+        if(empty($request->compare)){
+            $alert='Choose Hosting';
+        }else{
+            $hosting = DB::table('hosting')
+                        ->select('id', 'paket', 'slug_url')
+                        ->whereIn('id', $request->compare)->get();
+                        /* adodb_pr($hosting); */
+            $url='';
+            foreach($hosting as $r){
+                $url.=$r->slug_url.'-vs-';
+            }
+            $error=false;
+            $url=substr($url,0,-4);
+
+         }
+
+        $response = array(
+            'error' => $error,
+            'alert' => $alert,
+            'url'   => $url
+        );
+        echo json_encode($response);
+    }
+
+
 
 }

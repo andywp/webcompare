@@ -436,6 +436,9 @@
     </footer>
    
 
+   
+
+
    <!-- <script async type='text/javascript' src='https://www.qwords.com/wp-content/themes/qwordsv7_theme/js/join/all_footer.js'></script> -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -452,47 +455,9 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
     <script src="{{ URL::asset('assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/script.js') }}"></script>
     <script src="{{ URL::asset('assets/js/Chart.min.js') }}"></script>
     <script src="{{ URL::asset('assets/js/utils.js') }}"></script>
-    
-
-    <script>
-        $(document).ready(function() {
-
-            $('.product-slider').owlCarousel({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                loop: true,
-                autoplay:true,
-                speed: 2000,
-                smartSpeed:2000,
-                dots: true,
-                margin: 20,
-                nav  : true,
-                navText : ['<i class="fas fa-arrow-alt-circle-left"></i>','<i class="fas fa-arrow-alt-circle-right"></i>'],
-                autoplayHoverPause: true,
-                responsiveClass:true,
-                responsive: {
-                    0: {
-                    items: 1
-                    },
-                    768 : {
-                    items: 3
-                    },
-                    992  : {
-                    items: 4
-                    },
-                    1200: {
-                    items: 4
-                    }
-                }
-            });
-
-
-            $('.selectpicker').select2();
-          
-        })
-    </script>
 </body>
 
 </html>

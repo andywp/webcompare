@@ -459,12 +459,18 @@
 								<div class="recent-post-items">
 									<div class="media media-fitur">
 										<!-- <span class="mr-3"><i class="fas fa-check"></i></span> -->
-										<div class="media-body recent-post-it-ctn skill">
+										<!-- <div class="media-body recent-post-it-ctn skill">
 											<p class="mt-0 mb-0 ">{{ $fitur->domain }}</p>
 											<div class="progress">
 												<div class="progress-bar wow fadeInLeft" data-progress="<?=domainCart($fitur->domain) ?>%" style="width: <?= domainCart($fitur->domain)  ?>%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
 												</div>
 											</div>
+										</div> -->
+										<div class="media media-fitur fitur-icon">
+											<span class="mt-0 mb-0 mr-3  "><?= ($fitur->domain=='Free')?'<i class="fas fa-check"></i>':'<i class="fas fa-times"></i>';  ?></span>
+											<div class="media-body recent-post-it-ctn">
+                                        		<h6 class="mt-0 " ><?= ($fitur->domain=='Free')?'Yes':'No'; ?></h6>
+                            				</div>
 										</div>
 									</div>
 								</div> 
@@ -512,12 +518,18 @@
 								<div class="recent-post-items">
 									<div class="media media-fitur">
 										<!-- <span class="mr-3"><i class="fas fa-check"></i></span> -->
-										<div class="media-body recent-post-it-ctn skill">
+										<!-- <div class="media-body recent-post-it-ctn skill">
 											<p class="mt-0 mb-0 ">{{ $fitur->SSL }}</p>
 											<div class="progress">
 												<div class="progress-bar wow fadeInLeft" data-progress="<?=domainCart($fitur->SSL) ?>%" style="width: <?= domainCart($fitur->SSL)  ?>%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
 												</div>
 											</div>
+										</div> -->
+										<div class="media media-fitur fitur-icon">
+											<span class="mt-0 mb-0 mr-3  "><?= ($fitur->SSL=='Free')?'<i class="fas fa-check"></i>':'<i class="fas fa-times"></i>';  ?></span>
+											<div class="media-body recent-post-it-ctn">
+                                        		<h6 class="mt-0 " ><?= ($fitur->SSL=='Free')?'Yes':'No'; ?></h6>
+                            				</div>
 										</div>
 									</div>
 								</div> 
@@ -539,12 +551,18 @@
 								<div class="recent-post-items">
 									<div class="media media-fitur">
 										<!-- <span class="mr-3"><i class="fas fa-check"></i></span> -->
-										<div class="media-body recent-post-it-ctn skill">
+										<!-- <div class="media-body recent-post-it-ctn skill">
 											<p class="mt-0 mb-0 ">{{ $fitur->spam_filter }}</p>
 											<div class="progress">
 												<div class="progress-bar wow fadeInLeft" data-progress="<?=domainCart($fitur->spam_filter) ?>%" style="width: <?= domainCart($fitur->spam_filter)  ?>%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
 												</div>
 											</div>
+										</div> -->
+										<div class="media media-fitur fitur-icon">
+											<span class="mt-0 mb-0 mr-3  "><?= ($fitur->spam_filter=='Free')?'<i class="fas fa-check"></i>':'<i class="fas fa-times"></i>';  ?></span>
+											<div class="media-body recent-post-it-ctn">
+                                        		<h6 class="mt-0 " ><?= ($fitur->spam_filter=='Free')?'Yes':'No'; ?></h6>
+                            				</div>
 										</div>
 									</div>
 								</div> 
@@ -565,13 +583,23 @@
 								<div class="recent-post-items">
 									<div class="media media-fitur">
 										<!-- <span class="mr-3"><i class="fas fa-check"></i></span> -->
-										<div class="media-body recent-post-it-ctn skill">
+										<!-- <div class="media-body recent-post-it-ctn skill">
 											<p class="mt-0 mb-0 ">{{ $fitur->remote_MySQL }}</p>
 											<div class="progress">
 												<div class="progress-bar wow fadeInLeft" data-progress="<?= ($fitur->remote_MySQL=='No')?0:100;   ?>%" style="width: <?= ($fitur->remote_MySQL=='No')?0:100;   ?>%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
 												</div>
 											</div>
+										</div> -->
+										
+										<div class="media media-fitur fitur-icon">
+											<span class="mt-0 mb-0 mr-3  "><?= ($fitur->spam_filter=='Free')?'<i class="fas fa-check"></i>':'<i class="fas fa-times"></i>';  ?></span>
+											<div class="media-body recent-post-it-ctn">
+                                        		<h6 class="mt-0 " ><?= ($fitur->spam_filter=='Free')?'Yes':'No'; ?></h6>
+                            				</div>
 										</div>
+
+
+
 									</div>
 								</div> 
                             </div>
@@ -590,24 +618,27 @@
 </section>
 <!----- produk --------------->
 <?php
-	adodb_pr($data);
-	adodb_pr($produk);
+	/* adodb_pr($data);
+	adodb_pr($produk); */
 
 	$selectONE='';
+	$selectAuto='<option value="">Choose Hosting</option>';
 	foreach($produk as $r){
 
 		$selected=($r->id == $data->id)?'selected':'';
 		$selectONE.='<option value="'.$r->id.'" '.$selected.' >'.$r->paket.'</option>';
+		$selectAuto.='<option value="'.$r->id.'">'.$r->paket.'</option>';
 	}
-
-
 ?>
+<script type="text/javascript">
+	selectAuto+='<?= $selectAuto ?>';
+</script>
+
+ <div class="box-btn-compare">
+        <button  type="button" id="modalActivate" class="btn btn-orange" data-toggle="modal" data-target="#exampleModalPreview" ><i class="fas fa-plus"></i> Add Compare  </button>
+    </div>
 
 
-
-<div class="box-btn-compare">
-	<button id="modalActivate" class="btn btn-orange" data-toggle="modal" data-target="#exampleModalPreview" ><i class="fas fa-plus"></i> Add Compare  </button>
-</div>
 
 <!-- Modal -->
 <div class="modal fade right" id="exampleModalPreview" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
@@ -624,26 +655,29 @@
 				<div class="form-group">
 					<div class="row">
 						<div class="col-8 col-sm-10">
-							<select name="copare[]" class="selectpicker form-control" style="width:100%">
+							<select name="compare[]" class="selectpicker form-control" style="width:100%">
 								<?= $selectONE ?>
 							</select>
 						</div>
 						<div class="col-4 col-sm-2">
-							<button ><i class="fas fa-trash-alt"></i></button>
+							<!-- <button ><i class="fas fa-trash-alt"></i></button> -->
+							<button type="button" class="btn btn-info btn-sm addfrom" onclick="add();" ><i class="fas fa-plus-square"></i></button>
 						</div>
 					</div>
+					<div id="add"></div>
+
 				</div>
-
-
-			
             </div>
             <div class="modal-footer-full-width  modal-footer">
-				<button type="submit" class="btn btn-primary btn-md btn-rounded">Save changes</button>
+				<input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
+				<button type="submit" class="btn btn-primary btn-md btn-rounded">Compare</button>
                 <button type="button" class="btn btn-danger btn-md btn-rounded" data-dismiss="modal">Close</button>
             </div>
         </div>
 	</div>
-	</from>
+	</form>
+	
+
 </div>
 
 @include('footer')

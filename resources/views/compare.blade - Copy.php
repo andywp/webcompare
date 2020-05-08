@@ -4,23 +4,23 @@
     /* mulai pertarungan  */
     
     $memori=array();
-    $bandwidthArray=array();
-    $cpuArray=array();
+    $bandwidth=array();
+    $cpu=array();
     $storage=array();
-    $entry_prosesArray=array();
-    $InodesArray=array();
-    $PHP_memoryArray=array();
-    $max_emailArray=array();
-    $databaseArray=array();
-    $domainArray=array();
-    $SSLArray=array();
-    $subdomainAray=array();
-    $AddonArray=array();
-    $akunEmailArray=array();
-    $akun_FTPArray=array();
+    $entry_proses=array();
+    $Inodes=array();
+    $PHP_memory=array();
+    $max_email=array();
+    $database=array();
+    $domain=array();
+    $SSL=array();
+    $subdomain=array();
+    $Addon=array();
+    $akunEmail=array();
+    $akun_FTP=array();
     $website_builder=array();
-    $spam_filterArray=array();
-    $remote_MySQLArray=array();
+    $spam_filter=array();
+    $remote_MySQL=array();
     $winder=array();
     $total=array();
 
@@ -51,38 +51,38 @@
            /*  $id=$k->id; */
             $memori[]           =$valMemori;
             $storage[]          =$valSrorage;
-            $bandwidthArray[]   = $valbandwidth;
-            $cpuArray[]          =floatval($detail->CPU_core);
-            $entry_prosesArray[] =$valentry_proses;
-            $InodesArray[]           = $valInodes;
-            $PHP_memoryArray[]       = $valPHP_memory;
-            $max_emailArray[]        =$valmax_email;
-            $databaseArray[]         =$valdatabase;
-            $domainArray[]           =$valDomain;
-			$SSLArray[]              =$valSSL;
-            $subdomainAray[]        =$valSubdomain;
-            $AddonArray[]            =$valAddon;
-            $akunEmailArray[]        =$valakunEmail;
-            $akun_FTPArray[]         = $valakun_FTP;
+            $bandwidth[]        = $valbandwidth;
+            $cpu[]              =floatval($detail->CPU_core);
+            $entry_proses[]     =$valentry_proses;
+            $Inodes[]           = $valInodes;
+            $PHP_memory[]       = $valPHP_memory;
+            $max_email[]        =$valmax_email;
+            $database[]         =$valdatabase;
+            $domain[]           =$valDomain;
+			$SSL[]              =$valSSL;
+            $subdomain[]        =$valSubdomain;
+            $Addon[]            =$valAddon;
+            $akunEmail[]        =$valakunEmail;
+            $akun_FTP[]         = $valakun_FTP;
             $website_builder[]  =$valwebsite_builder;
-            $spam_filterArray[]      = $valspam_filter;
-            $remote_MySQLArray[]     =$valremote_MySQL;
+            $spam_filter[]      = $valspam_filter;
+            $remote_MySQL[]     =$valremote_MySQL;
 
 
             $total[$k->id]=$valMemori + $valSrorage + $valbandwidth +  $valCpu + $valentry_proses +  $valInodes +  $valmax_email +  $valDomain +  $valSSL + $valSubdomain +  $valAddon + $valakunEmail +  $valakun_FTP + $valwebsite_builder +  $valspam_filter + $valremote_MySQL;
     }
-   // adodb_pr($bandwidth);
+
     /* Hasil pertarungan */
 
-   // adodb_pr($total);
-   // echo   $max = max($total);
+    adodb_pr($total);
+    echo   $max = max($total);
     arsort($total);
-   // adodb_pr($total); 
+    adodb_pr($total); 
     $hosting=array();
      foreach($total as $k=>$v ){
         $hosting[]=DB::table('hosting')->where('id','=',$k)->first();
     } 
-   // adodb_pr($hosting);
+    adodb_pr($hosting);
 
     $html='';
     $title='';
@@ -123,7 +123,6 @@
         //$idHosting[]=$r->id;
         $fiturArray=unserialize($r->deskripsi);
         $fitur=(object)$fiturArray;
-        $detail=(object)$fiturArray;
         //adodb_pr($fitur);
 
         $winner=($i==1)?'winner':'';
@@ -154,270 +153,74 @@
         $CPUCore=(strpos($fitur->CPU_core,'Core'))?$fitur->CPU_core:$fitur->CPU_core.'Core';
         $titlePaket=($i==1)?'Kenapa '.$r->paket.' Lebih bagus':$r->paket;
         
-       // /* result compare fitur */
-        $fituHtml='';
-        /* ram */
-        if(!duplicates($memori)){
-            if(convertStorage($fitur->RAM) == max($memori)){
-                $fituHtml.='<div class="media media-comapre" data-to="class-storage" >
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Kapasitas Memori Ram</h5>
-                                    '.$fitur->RAM.'
-                                </div>
-                            </div>';
-            }
-        }
-        /* storage */
-        if(!duplicates($storage)){
-            if(convertStorage($fitur->storage) == max($storage)){
-                $fituHtml.='<div class="media media-comapre" data-to="class-storage">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Storage</h5>
-                                    '.$fitur->storage.'
-                                </div>
-                            </div>';
-            }
+        /* result compare fitur */
+		$fituHtml='';
+        if(convertStorage($fitur->RAM) == max($memori)){
+            $fituHtml.='<div class="media media-comapre">
+                            <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
+                            <div class="media-body">
+                                <h5 class="mt-0 heading-title">Kapasitas Memori</h5>
+                                '.$fitur->RAM.'
+                            </div>
+                        </div>';
         }
 
-        /* Bandwidth */
-        
 
-        $DATAbandwidth       =($fitur->bandwidth=='Unmetered')?99999:convertStorage($fitur->bandwidth);
-        if(!duplicates($bandwidthArray)){
-            if($DATAbandwidth  == @max($bandwidthArray)){
-                $fituHtml.='<div class="media media-comapre" data-to="class-storage">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Bandwidth</h5>
-                                    '.$fitur->bandwidth.'
-                                </div>
-                            </div>';
-            } 
-        }
 
-        /*cpu */
-        if(!duplicates($cpuArray)){
-            if(floatval($detail->CPU_core) == @max($cpuArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">CPU</h5>
-                                    '.$fitur->CPU_core.'
-                                </div>
-                            </div>';
-            } 
-        }
-        /*Entry Proses*/
-        if(!duplicates($entry_prosesArray)){
-            if(intval(str_replace('.','',$detail->entry_proses)) == @max($entry_prosesArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Entry Proses</h5>
-                                    '.$fitur->entry_proses.'
-                                </div>
-                            </div>';
-            }
-        } 
-        /*Inodes */
-        if(!duplicates($InodesArray)){
-            if(intval(str_replace('.','',$detail->Inodes)) == @max($InodesArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Inodes</h5>
-                                    '.$fitur->Inodes.'
-                                </div>
-                            </div>';
-            }
-        } 
-        /*PHP Memory*/
-        if(!duplicates($PHP_memoryArray)){     
-            if(convertStorage($detail->PHP_memory) == @max($PHP_memoryArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">PHP Memory</h5>
-                                    '.$fitur->PHP_memory.'
-                                </div>
-                            </div>';
-            }
-        }
 
-        /* Database */
-
-        if(!duplicates($databaseArray)){     
-            if(intval($detail->database) == @max($databaseArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Database</h5>
-                                    '.$fitur->database.'
-                                </div>
-                            </div>';
-            }
-        }
-
-        /*Akun Email*/
-        if(!duplicates($akunEmailArray)){     
-            if(($detail->akun_email =='Unlimited')?99999:intval($detail->akun_email) == @max($akunEmailArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Akun Email</h5>
-                                    '.$fitur->akun_email.'
-                                </div>
-                            </div>';
-            }
-        }
-
-        /*Max Email/Hour */
-        if(!duplicates($max_emailArray)){     
-            if(intval($detail->$var_max_email) == @max($max_emailArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Max Email/Hour</h5>
-                                    '.$fitur->$var_max_email.'
-                                </div>
-                            </div>';
-            }
-        }
-       
-        /* Akun FTP */
-        if(!duplicates($akun_FTPArray)){     
-            if(($detail->akun_FTP =='Unlimited')?99999:intval($detail->akun_FTP) == @max($akun_FTPArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Akun FTP</h5>
-                                    '.$fitur->$akun_FTP.'
-                                </div>
-                            </div>';
-            }
-        }
-       
-        /*Addon / Parked*/
-        if(!duplicates($AddonArray)){     
-            if(intval($detail->$var_Addon) == @max($AddonArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Addon / Parked</h5>
-                                    '.$fitur->$var_Addon.'
-                                </div>
-                            </div>';
-            }
+        $DATAbandwidth       =($fitur->bandwidth=='Unmetered')?99999:convertStorage($detail->bandwidth);
+        if($DATAbandwidth  == max($bandwidth)){
+            $fituHtml.='<div class="media media-comapre">
+                            <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
+                            <div class="media-body">
+                                <h5 class="mt-0 heading-title">Kapasitas Memori</h5>
+                                '.$fitur->RAM.'
+                            </div>
+                        </div>';
         }
 		
-		/* Domain  */
-		$valDomain          =($detail->domain=='Free')?1:0;
-        if(!duplicates($domainArray)){     
-            if($valDomain == @max($domainArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Domain</h5>
-                                    '.$fitur->domain.'
-                                </div>
-                            </div>';
-            }
-        }
+		
+		
+		
+		
 
-        /*Subdomain*/
-        $valSubdomain       =($detail->subdomain=='Unlimited')?99999:intval($detail->subdomain);
-        if(!duplicates($subdomainAray)){     
-            if($valSubdomain == @max($subdomainAray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Subdomain</h5>
-                                    '.$fitur->subdomain.'
-                                </div>
-                            </div>';
-            }
-        }
-
-
-
-        /*SSL*/
-        $valSSL          =($detail->SSL=='Free')?1:0;
-        if(!duplicates($SSLArray)){     
-            if($valSSL == @max($SSLArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">SSL</h5>
-                                    '.$fitur->SSL.'
-                                </div>
-                            </div>';
-            }
-        }
-
-        /*Spam filter*/
-        $valspam_filter     =($detail->spam_filter =='Free')?1:0;
-        if(!duplicates($spam_filterArray)){     
-            if($valspam_filter == @max($spam_filterArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Spam filter</h5>
-                                    '.$fitur->spam_filter.'
-                                </div>
-                            </div>';
-            }
-        }
-
-        /*Remote MySQL */
-        $valremote_MySQL    =($detail->remote_MySQL =='Yes')?1:0;
-        if(!duplicates($remote_MySQLArray)){     
-            if($valspam_filter == @max($remote_MySQLArray)){
-                $fituHtml.='<div class="media media-comapre">
-                                <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
-                                <div class="media-body">
-                                    <h5 class="mt-0 heading-title">Remote MySQL</h5>
-                                    '.$fitur->remote_MySQL.'
-                                </div>
-                            </div>';
-            }
-        }
-
-        $tabsContent .= '<div class="tab-pane fade ' . $classActive . ' pb-5" id="nav-hosting-' . $r->id . '" role="tabpanel" aria-labelledby="nav-home-tab' . $r->id . '">
+        $tabsContent .= '<div class="tab-pane fade ' . $classActive . ' " id="nav-hosting-' . $r->id . '" role="tabpanel" aria-labelledby="nav-home-tab' . $r->id . '">
                             <div class="text-detail">
                                 <h4 class="heading-title" >'.$titlePaket.'</h4>
-                                '.$fituHtml.'
+                                <div class="media media-comapre">
+                                    <span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
+									<div class="media-body">
+										<h5 class="mt-0 heading-title">Kapasitas Memori</h5>
+										'.$fitur->RAM.'
+									</div>
+								</div>
+								<div class="media media-comapre">
+										<span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
+									<div class="media-body">
+										<h5 class="mt-0 heading-title">CPU</h5>
+										'.$CPUCore.'
+									</div>
+								</div>
+								<div class="media media-comapre">
+										<span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
+									<div class="media-body">
+										<h5 class="mt-0 heading-title">Storage</h5>
+										'.$fitur->storage.'
+									</div>
+                                </div>
                             </div>
                         </div>';
 
                        /*  $value=$data->memory_value.','.$data->cpu_speed.','.$data->fitur; */
-
-        /* rsort($memori);
-        rsort($storage);
-        rsort($cpuArray);
-        rsort($entry_prosesArray); */
-
-
-        $charMemory=convertStorage($detail->RAM) / 1024;
-        $charStorage=convertStorage($detail->storage) / 1024;
-        $ChartCPU=floatval($detail->CPU_core) * 10;
-        /* $CharEntry=$entry_prosesArray[$c] * 10; */
-
-
         $jsLoad.='{
                         label: \''.$r->paket.'\',
                         backgroundColor: color(window.chartColors.'.$color[$c].').alpha(0.2).rgbString(),
                         borderColor: window.chartColors.'.$color[$c].',
                         pointBackgroundColor: window.chartColors.'.$color[$c].',
                         data: [
-                            '.$charMemory.',
-                            '.$charStorage.',
-                            '.$ChartCPU.',
-                            '.intval(str_replace('.','',$detail->entry_proses)).',   
-                            '.(intval(str_replace('.','',$detail->Inodes)) / 1000 ).',   
-                            '.convertStorage($detail->PHP_memory).',
-                            '.intval($detail->database).'   
+                            '.$r->memory_value.',
+                            '.$r->cpu_speed.',
+                            '.$r->fitur.',   
                         ]
                          },';
         
@@ -431,11 +234,11 @@
                     ';  
                     
         $FeaturedStorage.='
-                            <div class="media media-fitur" id="class-storage" >
+                            <div class="media media-fitur">
                                 <!-- <span class="mr-3"><i class="fas fa-check"></i></span> -->
                                 <div class="media-body recent-post-it-ctn skill">
                                     <p class="mt-0 mb-0 ">'.$fitur->storage.'</p>
-                                    <div class="progress" id="class-storage">
+                                    <div class="progress">
                                         <div class="progress-bar wow fadeInLeft" data-progress="'.storageBar($fitur->storage).'%" style="width:'.storageBar($fitur->storage).'%; background:'.$bgColor[$c].';  " data-wow-duration="1.5s" data-wow-delay="1.2s">
                                         </div>
                                     </div>
@@ -1167,7 +970,7 @@
 		var config = {
 			type: 'radar',
 			data: {
-				labels: [['Memories'], ['Storage'],['CPU'],['Entry','Proses'],['Inodes'],['PHP','Memory'],['Database']],
+				labels: [['Memories'], ['Speed'], ['Storage']],
 				datasets: [<?= $jsLoad ?>] 
 			},
 			options: {

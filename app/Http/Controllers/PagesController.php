@@ -134,8 +134,7 @@ class PagesController extends Controller
         $url=anti_Injection($url);
         $urlSlug=explode('-vs-',urldecode($url));
         /*--- load DB----- */
-        $hosting = DB::table('hosting')
-        ->whereIn('slug_url', $urlSlug)->get();
+        $hosting = DB::table('hosting')->whereIn('slug_url', $urlSlug)->get();
         
        /* untuk select compare */
        $produk = DB::table('hosting')->select('id', 'paket','slug_url')->get();
@@ -150,28 +149,10 @@ class PagesController extends Controller
         SEOMeta::setDescription('Compare '. $titleSEO);
         SEOMeta::setCanonical(url('/'));
 
-         /**comapre */
-        adodb_pr($idp);
-        /* vs 1 */     
+
+
+
         
-
-        /* if(@$idp[0]){
-            $vsDB1 = DB::table('hosting')->where('id',$idp[0])->first();
-            $detail=(object)unserialize($vsDB1->deskripsi);
-            adodb_pr($detail);
-            $id=$vsDB1->id;
-            $memori1=convertStorage($detail->storage);
-            $bandwidth1=($detail->bandwidth=='Unmetered')?9999999999:convertStorage($detail->bandwidth);
-            $cpu1=floatval($detail->CPU_core);
-
-
-        }
- */
-
-
-
-
-
         return view('compare',['data'=>$hosting, 'produk' => $produk]);
 
     }

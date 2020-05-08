@@ -52,7 +52,7 @@
 						<div class="tab-content" id="nav-tabContent">
 							<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 								<div class="text-detail">
-									<h4 class="heading-title" >Mengapa {{ $data->paket }} lenih baik dari rata-rata? </h4>
+									<h4 class="heading-title" >Mengapa {{ $data->paket }} lebih baik dari rata-rata? </h4>
 									<div class="media media-comapre">
 										<span class="mr-3 mt-2" ><i class="fas fa-check"></i></span>
 									  <div class="media-body">

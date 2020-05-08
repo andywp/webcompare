@@ -65,7 +65,13 @@ $(document).ready(function() {
 
     $('[data-toggle="tooltip"]').tooltip();   
 
-
+    $('.text-detail .media-comapre').click(function() {
+       var id = $(this).attr("data-to") ;
+        //alert(id);
+        var $id = $('#'+id);
+        var pos = $id.offset().top;
+        $('body, html').animate({scrollTop: pos});
+    });
   
 });
 

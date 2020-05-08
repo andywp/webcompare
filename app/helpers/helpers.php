@@ -93,6 +93,10 @@
 	}
 
 
+	/* function GB($data){
+
+	} */
+
 
 
 	function anti_Injection($inp)
@@ -216,6 +220,19 @@
 		}
 		
 	}
+
+
+	function duplicates($array=array()){
+		if(count($array) == count(array_unique($array)) ){
+			return false;
+		}else{
+			return true;
+		}
+
+
+	}
+
+
 
 
 

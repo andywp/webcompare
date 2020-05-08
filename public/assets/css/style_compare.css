@@ -225,3 +225,22 @@ canvas {
 	float: right;
 	text-align: left !important;
   }
+
+.box-hosting.winner {
+	border: solid 1px #E91E63;
+	position: relative;
+}
+
+.icon-win {
+    height: 80px;
+    width: 80px;
+    background-image: url(../img/winner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* margin-bottom: 30px; */
+    position: absolute;
+    top: -23px;
+	right: 0px;
+	transform: rotate(-20deg);
+}
